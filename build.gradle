@@ -1,0 +1,40 @@
+apply plugin: 'java'
+apply plugin: 'eclipse'
+
+sourceCompatibility = 1.6
+targetCompatibility = 1.6
+version = '0.1'
+group = "io.github.hsyyid"
+archivesBaseName = "RandomSpawn"
+
+jar {
+    manifest {
+        attributes 'Implementation-Title': 'RandomSpawn',
+                   'Implementation-Version': version
+    }
+}
+
+repositories {
+    mavenCentral()
+    maven {
+        name 'Sponge maven repo'
+        url 'http://repo.spongepowered.org/maven'
+    }
+}
+
+dependencies {
+    compile "org.spongepowered:spongeapi:2.1-SNAPSHOT"
+    compile files('libs/TotalEconomy.jar')
+}
+
+test {
+    systemProperties 'property': 'value'
+}
+
+uploadArchives {
+    repositories {
+       flatDir {
+           dirs 'repos'
+       }
+    }
+}
