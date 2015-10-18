@@ -1,16 +1,10 @@
 package io.github.hsyyid.randomspawn;
 
+import com.google.inject.Inject;
 import io.github.hsyyid.randomspawn.utils.Utils;
-
-import java.io.File;
-import java.io.IOException;
-import java.util.ArrayList;
-import java.util.Random;
-
 import ninja.leaping.configurate.ConfigurationNode;
 import ninja.leaping.configurate.commented.CommentedConfigurationNode;
 import ninja.leaping.configurate.loader.ConfigurationLoader;
-
 import org.slf4j.Logger;
 import org.spongepowered.api.Game;
 import org.spongepowered.api.block.BlockTypes;
@@ -26,8 +20,11 @@ import org.spongepowered.api.world.Location;
 import org.spongepowered.api.world.TeleportHelper;
 import org.spongepowered.api.world.World;
 
-import com.google.common.base.Optional;
-import com.google.inject.Inject;
+import java.io.File;
+import java.io.IOException;
+import java.util.ArrayList;
+import java.util.Optional;
+import java.util.Random;
 
 
 @Plugin(id = "RandomSpawn", name = "RandomSpawn", version = "0.1")
